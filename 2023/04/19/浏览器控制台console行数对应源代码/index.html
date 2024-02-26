@@ -468,8 +468,10 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h3 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h3><p>浏览器控制台console行数没有对应源代码的console行数</p>
-<h3 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h3><p>打开设置,勾选“启用JavaScript源代码映射”</p>
+                <h3 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h3><p>浏览器控制台 console 行数没有对应源代码的 console 行数</p>
+<h3 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h3><p>vue.config.js配置：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">configureWebpack: &#123;</span><br><span class="line">  devtool: &#x27;source-map&#x27;</span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure>
+<p>浏览器控制台：<br>打开设置,勾选“启用 JavaScript 源代码映射”</p>
 
                 
             </div>
@@ -792,12 +794,12 @@
                         <span class="chip bg-color">vue</span>
                     </a>
                     
-                    <a href="/tags/Pc/">
-                        <span class="chip bg-color">Pc</span>
-                    </a>
-                    
                     <a href="/tags/pdf/">
                         <span class="chip bg-color">pdf</span>
+                    </a>
+                    
+                    <a href="/tags/Pc/">
+                        <span class="chip bg-color">Pc</span>
                     </a>
                     
                 </div>
@@ -991,7 +993,7 @@
         <div class="col s12 m8 l8 copy-right">
             Copyright&nbsp;&copy;
             
-                <span id="year">2019-2023</span>
+                <span id="year">2019-2024</span>
             
             <span id="year">2019</span>
             <a href="/about" target="_blank">John Doe</a>

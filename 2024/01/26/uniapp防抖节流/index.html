@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="echarts中lines路径图effect, Hexo">
+    <meta name="keywords" content="uniapp防抖节流, Hexo">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>echarts中lines路径图effect | Hexo</title>
+    <title>uniapp防抖节流 | Hexo</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -310,12 +310,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/18.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/12.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">echarts中lines路径图effect</h1>
+                    <h1 class="description center-align post-title">uniapp防抖节流</h1>
                 </div>
             </div>
         </div>
@@ -431,8 +431,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/echarts/">
-                                <span class="chip bg-color">echarts</span>
+                            <a href="/tags/uniapp/">
+                                <span class="chip bg-color">uniapp</span>
                             </a>
                         
                     </div>
@@ -447,7 +447,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>Publish Date:&nbsp;&nbsp;
-                    2023-04-19
+                    2024-01-26
                 </div>
                 
 
@@ -468,9 +468,7 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h3 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h3><p>5.4.0版本末端超出问题</p>
-<h3 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h3><p>降低版本到5.3.3，arrow类型成功</p>
-
+                <h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br></pre></td><td class="code"><pre><span class="line">/**</span><br><span class="line"> * 防抖原理：一定时间内，只有最后一次操作，再过wait毫秒后才执行函数</span><br><span class="line"> *</span><br><span class="line"> * @param &#123;Function&#125; func 要执行的回调函数</span><br><span class="line"> * @param &#123;Number&#125; wait 延时的时间</span><br><span class="line"> * @param &#123;Boolean&#125; immediate 是否立即执行</span><br><span class="line"> * @return null</span><br><span class="line"> */</span><br><span class="line">let timeout = null</span><br><span class="line"></span><br><span class="line">function debounce(func, wait = 1000, parameters, immediate = false) &#123;</span><br><span class="line">	// 清除定时器</span><br><span class="line">	if (timeout !== null) clearTimeout(timeout)</span><br><span class="line">	const param_type = Object.prototype.toString.call(parameters)</span><br><span class="line">	if (param_type === &#x27;[object Number]&#x27; || param_type === &#x27;[object String]&#x27;) &#123;</span><br><span class="line">		parameters = [parameters]</span><br><span class="line">	&#125;</span><br><span class="line">	// 立即执行，此类情况一般用不到</span><br><span class="line">	if (immediate) &#123;</span><br><span class="line">		const callNow = !timeout</span><br><span class="line">		timeout = setTimeout(() =&gt; &#123;</span><br><span class="line">			timeout = null</span><br><span class="line">		&#125;, wait)</span><br><span class="line">		if (callNow) typeof func === &#x27;function&#x27; &amp;&amp; func(...parameters)</span><br><span class="line">	&#125; else &#123;</span><br><span class="line">		// 设置定时器，当最后一次操作后，timeout不会再被清除，所以在延时wait毫秒后执行func回调方法</span><br><span class="line">		timeout = setTimeout(() =&gt; &#123;</span><br><span class="line">			typeof func === &#x27;function&#x27; &amp;&amp; func(...parameters)</span><br><span class="line">		&#125;, wait)</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">/**</span><br><span class="line"> * 节流原理：在一定时间内，只能触发一次</span><br><span class="line"> *</span><br><span class="line"> * @param &#123;Function&#125; func 要执行的回调函数</span><br><span class="line"> * @param &#123;Number&#125; wait 延时的时间</span><br><span class="line"> * @param &#123;Boolean&#125; immediate 是否立即执行</span><br><span class="line"> * @return null</span><br><span class="line"> */</span><br><span class="line">let timer;</span><br><span class="line">let flag;</span><br><span class="line"></span><br><span class="line">function throttle(func, wait = 1000, immediate = true) &#123;</span><br><span class="line">	if (immediate) &#123;</span><br><span class="line">		if (!flag) &#123;</span><br><span class="line">			flag = true</span><br><span class="line">			// 如果是立即执行，则在wait毫秒内开始时执行</span><br><span class="line">			typeof func === &#x27;function&#x27; &amp;&amp; func()</span><br><span class="line">			timer = setTimeout(() =&gt; &#123;</span><br><span class="line">				flag = false</span><br><span class="line">			&#125;, wait)</span><br><span class="line">		&#125;</span><br><span class="line">	&#125; else if (!flag) &#123;</span><br><span class="line">		flag = true</span><br><span class="line">		// 如果是非立即执行，则在wait毫秒内的结束处执行</span><br><span class="line">		timer = setTimeout(() =&gt; &#123;</span><br><span class="line">			flag = false</span><br><span class="line">			typeof func === &#x27;function&#x27; &amp;&amp; func()</span><br><span class="line">		&#125;, wait)</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line">export default &#123;</span><br><span class="line">	debounce,</span><br><span class="line">	throttle</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
                 
             </div>
             <hr/>
@@ -496,7 +494,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://example.com/2023/04/19/echarts%E4%B8%ADlines%E8%B7%AF%E5%BE%84%E5%9B%BEeffect/">http://example.com/2023/04/19/echarts%E4%B8%ADlines%E8%B7%AF%E5%BE%84%E5%9B%BEeffect/</a>
+                    <a href="http://example.com/2024/01/26/uniapp%E9%98%B2%E6%8A%96%E8%8A%82%E6%B5%81/">http://example.com/2024/01/26/uniapp%E9%98%B2%E6%8A%96%E8%8A%82%E6%B5%81/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -534,8 +532,8 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/echarts/">
-                                    <span class="chip bg-color">echarts</span>
+                                <a href="/tags/uniapp/">
+                                    <span class="chip bg-color">uniapp</span>
                                 </a>
                             
                         </div>
@@ -709,24 +707,24 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;Previous</div>
             <div class="card">
-                <a href="/2023/04/19/H5%E9%98%BB%E6%AD%A2%E9%A1%B5%E9%9D%A2%E6%BB%9A%E5%8A%A8/">
+                <a href="/2024/02/26/%E7%BD%91%E5%9D%80/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/9.jpg" class="responsive-img" alt="H5阻止页面滚动">
+                        <img src="/medias/featureimages/23.jpg" class="responsive-img" alt="网址">
                         
-                        <span class="card-title">H5阻止页面滚动</span>
+                        <span class="card-title">网址</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            H5阻止页面滚动
+                            资源网址
                         
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2023-04-19
+                            <i class="far fa-clock fa-fw icon-date"></i>2024-02-26
                         </span>
                         <span class="publish-author">
                             
@@ -739,16 +737,8 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/vue/">
-                        <span class="chip bg-color">vue</span>
-                    </a>
-                    
-                    <a href="/tags/h5/">
-                        <span class="chip bg-color">h5</span>
-                    </a>
-                    
-                    <a href="/tags/%E7%A7%BB%E5%8A%A8%E7%AB%AF/">
-                        <span class="chip bg-color">移动端</span>
+                    <a href="/tags/echarts/">
+                        <span class="chip bg-color">echarts</span>
                     </a>
                     
                 </div>
@@ -759,27 +749,27 @@
         
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge right-badge text-color">
-                Current&nbsp;<i class="far fa-dot-circle"></i>
+                Next&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2023/04/19/echarts%E4%B8%ADlines%E8%B7%AF%E5%BE%84%E5%9B%BEeffect/">
+                <a href="/2024/01/26/uniapp%E5%AE%89%E5%8D%93%E5%B9%B3%E6%9D%BF%E6%A8%AA%E5%B1%8F%E5%85%BC%E5%AE%B9%20copy/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/18.jpg" class="responsive-img" alt="echarts中lines路径图effect">
+                        <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="uniapp安卓平板横屏兼容">
                         
-                        <span class="card-title">echarts中lines路径图effect</span>
+                        <span class="card-title">uniapp安卓平板横屏兼容</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            echarts中lines路径图effect末端冲出效果
+                            uniapp项目App在安卓平板横屏兼容
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2023-04-19
+                                <i class="far fa-clock fa-fw icon-date"></i>2024-01-26
                             </span>
                         <span class="publish-author">
                             
@@ -789,12 +779,15 @@
                         </span>
                     </div>
                 </div>
-
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/echarts/">
-                        <span class="chip bg-color">echarts</span>
+                    <a href="/tags/uniapp/">
+                        <span class="chip bg-color">uniapp</span>
+                    </a>
+                    
+                    <a href="/tags/%E5%B9%B3%E6%9D%BF/">
+                        <span class="chip bg-color">平板</span>
                     </a>
                     
                 </div>
