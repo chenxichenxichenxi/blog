@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="uniapp安卓平板横屏兼容, Hexo">
+    <meta name="keywords" content="vue格式化代码, Hexo">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>uniapp安卓平板横屏兼容 | Hexo</title>
+    <title>vue格式化代码 | Hexo</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -310,12 +310,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/15.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/21.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">uniapp安卓平板横屏兼容</h1>
+                    <h1 class="description center-align post-title">vue格式化代码</h1>
                 </div>
             </div>
         </div>
@@ -431,12 +431,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/uniapp/">
-                                <span class="chip bg-color">uniapp</span>
-                            </a>
-                        
-                            <a href="/tags/%E5%B9%B3%E6%9D%BF/">
-                                <span class="chip bg-color">平板</span>
+                            <a href="/tags/vue/">
+                                <span class="chip bg-color">vue</span>
                             </a>
                         
                     </div>
@@ -451,7 +447,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>Publish Date:&nbsp;&nbsp;
-                    2024-01-26
+                    2024-03-05
                 </div>
                 
 
@@ -472,12 +468,19 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">// #ifdef APP-PLUS</span><br><span class="line">// 设置全屏</span><br><span class="line">plus.navigator.setFullscreen(true); </span><br><span class="line">// 强制横屏</span><br><span class="line">plus.screen.lockOrientation(&#x27;landscape-primary&#x27;);</span><br><span class="line">// #endif</span><br></pre></td></tr></table></figure>
+                <h3 id="插件"><a href="#插件" class="headerlink" title="插件"></a>插件</h3><p>eslint、eslint-config-prettier、eslint-plugin-prettier、eslint-plugin-vue、prettier</p>
+<h3 id="使用方法"><a href="#使用方法" class="headerlink" title="使用方法"></a>使用方法</h3><p>1、安装插件<br>2、添加配置文件</p>
+<p>.editorconfig</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">root = true  # 表示这是最顶层的配置文件，EditorConfig 不会继续查找父目录中的 .editorconfig 文件。</span><br><span class="line"></span><br><span class="line">[*]  # 表示以下规则适用于所有文件。</span><br><span class="line">charset = utf-8  # 设置文件字符集为 UTF-8。</span><br><span class="line">indent_style = space  # 设置缩进风格为空格。</span><br><span class="line">indent_size = 2  # 设置缩进大小为 2 个空格。</span><br><span class="line">end_of_line = lf  # 设置文件换行符为 LF（Unix 风格）。</span><br><span class="line">trim_trailing_whitespace = true  # 设置为移除行尾的空格。</span><br><span class="line">insert_final_newline = true  # 设置为文件末尾添加一个空行。</span><br><span class="line"></span><br><span class="line">[*.md]  # 表示以下规则仅适用于以 .md 扩展名的 Markdown 文件。</span><br><span class="line">trim_trailing_whitespace = false  # 对于 Markdown 文件，不删除行尾的空格。</span><br><span class="line">insert_final_newline = true  # 对于 Markdown 文件，文件末尾仍然添加一个空行。</span><br></pre></td></tr></table></figure>
 
-<h3 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h3><ul>
-<li>不要使用rpx,使用px</li>
-</ul>
+<p>.prettierrc.js</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">module.exports = &#123;</span><br><span class="line">  tabWidth: 2, // 设置缩进的空格数为 2 个</span><br><span class="line">  printWidth: 140, // 设置每行的字符数限制为 140 个，超过这个限制的行将会被折行</span><br><span class="line">  singleQuote: false, // 设置字符串使用双引号而不是单引号</span><br><span class="line">  semi: true, // 设置在语句末尾添加分号</span><br><span class="line">  trailingComma: &quot;all&quot;, // 在多行结构中，尽可能在最后添加逗号（包括函数参数、对象属性、数组元素）</span><br><span class="line">  arrowParens: &quot;avoid&quot;, // 箭头函数参数只有一个时，省略括号，例如 `x =&gt; x` 而不是 `(x) =&gt; x`</span><br><span class="line">  requirePragma: false, // 不要求文件顶部必须有 @prettier 指令才能格式化</span><br><span class="line">  htmlWhitespaceSensitivity: &quot;ignore&quot;, // 对于 HTML 文件，Prettier 将会忽略空白的敏感度</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 
+<p>.prettierignore</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">.hbuilderx/*</span><br><span class="line">hybrid/*</span><br><span class="line">node_modules/*</span><br><span class="line">uni_modules/*</span><br><span class="line">unpackage/*</span><br></pre></td></tr></table></figure>
+
+<p>.eslintrc.js</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br></pre></td><td class="code"><pre><span class="line">module.exports = &#123;</span><br><span class="line">  // 设置根目录，为 true 时，ESLint 会停止在父级目录中查找配置文件</span><br><span class="line">  root: true,</span><br><span class="line">  // 设置环境，这里指定为 Node.js 环境</span><br><span class="line">  env: &#123;</span><br><span class="line">    node: true,</span><br><span class="line">  &#125;,</span><br><span class="line">  // 继承一组预定义的规则集</span><br><span class="line">  extends: [</span><br><span class="line">    // Vue.js 的基本规则</span><br><span class="line">    &quot;plugin:vue/essential&quot;,</span><br><span class="line">    &quot;plugin:vue/recommended&quot;,</span><br><span class="line">    // ESLint 推荐的规则</span><br><span class="line">    &quot;eslint:recommended&quot;,</span><br><span class="line">    // Prettier 推荐的规则，确保 ESLint 规则与 Prettier 的格式化规则不冲突</span><br><span class="line">    &quot;plugin:prettier/recommended&quot;,</span><br><span class="line">  ],</span><br><span class="line">  // 解析器选项，这里使用 @babel/eslint-parser 来解析 ES6+ 代码</span><br><span class="line">  // parserOptions: &#123;</span><br><span class="line">  //   parser: &quot;@babel/eslint-parser&quot;,</span><br><span class="line">  // &#125;,</span><br><span class="line">  // 全局变量</span><br><span class="line">  globals: &#123;</span><br><span class="line">    uni: true,</span><br><span class="line">    plus: true,</span><br><span class="line">  &#125;,</span><br><span class="line">  // 忽略文件</span><br><span class="line">  ignorePatterns: [&quot;.hbuilderx/*&quot;, &quot;hybrid/*&quot;, &quot;node_modules/*&quot;, &quot;uni_modules/*&quot;, &quot;unpackage/*&quot;],</span><br><span class="line">  // 自定义规则</span><br><span class="line">  rules: &#123;</span><br><span class="line">    // 禁止使用 console，在生产环境中给出警告，在开发环境中不检查</span><br><span class="line">    &quot;no-console&quot;: process.env.NODE_ENV === &quot;production&quot; ? &quot;warn&quot; : &quot;off&quot;,</span><br><span class="line">    // 禁止使用 debugger，在生产环境中给出警告，在开发环境中不检查</span><br><span class="line">    &quot;no-debugger&quot;: process.env.NODE_ENV === &quot;production&quot; ? &quot;warn&quot; : &quot;off&quot;,</span><br><span class="line">    // 组件模板中的属性（包括指令、绑定、事件等）以特定的顺序排列</span><br><span class="line">    &quot;vue/attributes-order&quot;: [</span><br><span class="line">      &quot;error&quot;,</span><br><span class="line">      &#123;</span><br><span class="line">        order: [</span><br><span class="line">          &quot;DEFINITION&quot;,</span><br><span class="line">          &quot;LIST_RENDERING&quot;,</span><br><span class="line">          &quot;CONDITIONALS&quot;,</span><br><span class="line">          &quot;RENDER_MODIFIERS&quot;,</span><br><span class="line">          &quot;GLOBAL&quot;,</span><br><span class="line">          &quot;UNIQUE&quot;,</span><br><span class="line">          &quot;TWO_WAY_BINDING&quot;,</span><br><span class="line">          &quot;OTHER_DIRECTIVES&quot;,</span><br><span class="line">          &quot;OTHER_ATTR&quot;,</span><br><span class="line">          &quot;EVENTS&quot;,</span><br><span class="line">          &quot;CONTENT&quot;,</span><br><span class="line">        ],</span><br><span class="line">      &#125;,</span><br><span class="line">    ],</span><br><span class="line">    // vue文件中name非多字</span><br><span class="line">    &quot;vue/multi-word-component-names&quot;: &quot;off&quot;,</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
                 
             </div>
             <hr/>
@@ -503,7 +506,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://example.com/2024/01/26/uniapp%E5%AE%89%E5%8D%93%E5%B9%B3%E6%9D%BF%E6%A8%AA%E5%B1%8F%E5%85%BC%E5%AE%B9%20copy/">http://example.com/2024/01/26/uniapp%E5%AE%89%E5%8D%93%E5%B9%B3%E6%9D%BF%E6%A8%AA%E5%B1%8F%E5%85%BC%E5%AE%B9%20copy/</a>
+                    <a href="http://example.com/2024/03/05/vue%E6%A0%BC%E5%BC%8F%E5%8C%96%E4%BB%A3%E7%A0%81/">http://example.com/2024/03/05/vue%E6%A0%BC%E5%BC%8F%E5%8C%96%E4%BB%A3%E7%A0%81/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -541,12 +544,8 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/uniapp/">
-                                    <span class="chip bg-color">uniapp</span>
-                                </a>
-                            
-                                <a href="/tags/%E5%B9%B3%E6%9D%BF/">
-                                    <span class="chip bg-color">平板</span>
+                                <a href="/tags/vue/">
+                                    <span class="chip bg-color">vue</span>
                                 </a>
                             
                         </div>
@@ -716,29 +715,30 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;Previous</div>
+                <i class="far fa-dot-circle"></i>&nbsp;Current
+            </div>
             <div class="card">
-                <a href="/2024/01/26/uniapp%E9%98%B2%E6%8A%96%E8%8A%82%E6%B5%81/">
+                <a href="/2024/03/05/vue%E6%A0%BC%E5%BC%8F%E5%8C%96%E4%BB%A3%E7%A0%81/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="uniapp防抖节流">
+                        <img src="/medias/featureimages/21.jpg" class="responsive-img" alt="vue格式化代码">
                         
-                        <span class="card-title">uniapp防抖节流</span>
+                        <span class="card-title">vue格式化代码</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            uniapp防抖节流
+                            vue格式化代码
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2024-01-26
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2024-03-05
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -747,11 +747,12 @@
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/uniapp/">
-                        <span class="chip bg-color">uniapp</span>
+                    <a href="/tags/vue/">
+                        <span class="chip bg-color">vue</span>
                     </a>
                     
                 </div>
@@ -765,24 +766,24 @@
                 Next&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2023/08/31/App%E8%87%AA%E5%8A%A8%E5%8D%87%E7%BA%A7/">
+                <a href="/2024/02/26/%E7%BD%91%E5%9D%80/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="App自动升级">
+                        <img src="/medias/featureimages/23.jpg" class="responsive-img" alt="网址">
                         
-                        <span class="card-title">App自动升级</span>
+                        <span class="card-title">网址</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            App自动升级
+                            资源网址
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2023-08-31
+                                <i class="far fa-clock fa-fw icon-date"></i>2024-02-26
                             </span>
                         <span class="publish-author">
                             
@@ -795,12 +796,8 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/uniapp/">
-                        <span class="chip bg-color">uniapp</span>
-                    </a>
-                    
-                    <a href="/tags/IIS/">
-                        <span class="chip bg-color">IIS</span>
+                    <a href="/tags/%E8%B5%84%E6%BA%90/">
+                        <span class="chip bg-color">资源</span>
                     </a>
                     
                 </div>
