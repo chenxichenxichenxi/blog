@@ -469,8 +469,8 @@
         <div class="card-content article-card-content">
             <div id="articleContent">
                 <h3 id="插件"><a href="#插件" class="headerlink" title="插件"></a>插件</h3><p>eslint、eslint-config-prettier、eslint-plugin-prettier、eslint-plugin-vue、prettier</p>
-<h3 id="使用方法"><a href="#使用方法" class="headerlink" title="使用方法"></a>使用方法</h3><p>1、安装插件<br>2、添加配置文件</p>
-<p>.editorconfig</p>
+<h3 id="使用方法"><a href="#使用方法" class="headerlink" title="使用方法"></a>使用方法</h3><p>1、安装插件<br>2、添加配置文件: .editorconfig、.prettierrc.js、.prettierignore、.eslintrc.js</p>
+<h3 id="配置文件"><a href="#配置文件" class="headerlink" title="配置文件"></a>配置文件</h3><p>.editorconfig</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">root = true  # 表示这是最顶层的配置文件，EditorConfig 不会继续查找父目录中的 .editorconfig 文件。</span><br><span class="line"></span><br><span class="line">[*]  # 表示以下规则适用于所有文件。</span><br><span class="line">charset = utf-8  # 设置文件字符集为 UTF-8。</span><br><span class="line">indent_style = space  # 设置缩进风格为空格。</span><br><span class="line">indent_size = 2  # 设置缩进大小为 2 个空格。</span><br><span class="line">end_of_line = lf  # 设置文件换行符为 LF（Unix 风格）。</span><br><span class="line">trim_trailing_whitespace = true  # 设置为移除行尾的空格。</span><br><span class="line">insert_final_newline = true  # 设置为文件末尾添加一个空行。</span><br><span class="line"></span><br><span class="line">[*.md]  # 表示以下规则仅适用于以 .md 扩展名的 Markdown 文件。</span><br><span class="line">trim_trailing_whitespace = false  # 对于 Markdown 文件，不删除行尾的空格。</span><br><span class="line">insert_final_newline = true  # 对于 Markdown 文件，文件末尾仍然添加一个空行。</span><br></pre></td></tr></table></figure>
 
 <p>.prettierrc.js</p>
